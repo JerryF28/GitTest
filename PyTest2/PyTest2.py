@@ -1,4 +1,4 @@
-import requests
+import requests as req
 from bs4 import BeautifulSoup as bs
 
 print("Hello, World!\n")
@@ -12,7 +12,7 @@ def strToFloat(x):
             y += '.'
     return float(y)
 
-r = requests.get("https://yandex.ru/")
+r = req.get("https://yandex.ru/")
 
 html = bs(r.content, 'html.parser')
 
@@ -27,5 +27,3 @@ for k, v in price.items():
     print(k, ':', v)
 
 print("\nBye, World!\n")
-
-print('evfefvevefve')
